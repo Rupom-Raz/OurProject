@@ -18,6 +18,7 @@
             android:layout_width="130dp"
             android:layout_height="150dp"
             android:layout_margin="10dp"
+            android:id="@+id/uploadNotice"
             app:cardElevation="5dp">
 
             <LinearLayout
@@ -57,6 +58,7 @@
             android:layout_width="130dp"
             android:layout_height="150dp"
             android:layout_margin="10dp"
+            android:id="@+id/uploadImage"
             app:cardElevation="5dp">
 
             <LinearLayout
@@ -106,6 +108,7 @@
             android:layout_width="130dp"
             android:layout_height="150dp"
             android:layout_margin="10dp"
+            android:id="@+id/uploadEbook"
             app:cardElevation="5dp">
 
             <LinearLayout
@@ -145,6 +148,7 @@
             android:layout_width="130dp"
             android:layout_height="150dp"
             android:layout_margin="10dp"
+            android:id="@+id/updateFaculty"
             app:cardElevation="5dp">
 
             <LinearLayout
@@ -194,6 +198,7 @@
             android:layout_width="130dp"
             android:layout_height="150dp"
             android:layout_margin="10dp"
+            android:id="@+id/deleteNotice"
             app:cardElevation="5dp">
 
             <LinearLayout

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:padding="16dp"
     android:layout_height="match_parent"
-    tools:context=".Uploadnotice">
+    tools:context=".UploadImage">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:layout_width="130dp"
             android:layout_height="150dp"
             android:layout_margin="10dp"
-            android:id="@+id/addImage"
+            android:id="@+id/addGalleryImg"
             android:layout_gravity="center"
             app:cardElevation="5dp">
 
@@ -31,7 +31,7 @@
                 <ImageView
                     android:layout_width="64dp"
                     android:layout_height="64dp"
-                    android:background="@drawable/circle_purple"
+                    android:background="@drawable/circle_yellow"
                     android:padding="15dp"
                     android:src="@drawable/ic_image" />
 
@@ -60,34 +60,36 @@
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_marginTop="16dp"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"/>
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/noticeTitle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Notice Title" />
-        </com.google.android.material.textfield.TextInputLayout>
+          <Spinner
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/imageCategory"
+              android:spinnerMode="dropdown"
+              android:background="@android:drawable/btn_dropdown"
+              android:gravity="center"
+              android:layout_marginVertical="16dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Upload Notice"
+            android:text="Upload Image"
             android:layout_marginTop="16dp"
             android:textAllCaps="false"
-            android:id="@+id/uploadNoticeBtn"/>
+            android:id="@+id/uploadImageBtn"/>
 
-       <com.google.android.material.card.MaterialCardView
-           android:layout_width="match_parent"
-           android:layout_marginTop="5dp"
-           android:layout_height="400dp">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_height="400dp">
 
-           <ImageView
-               android:layout_width="match_parent"
-               android:layout_height="match_parent"
-               android:scaleType="centerCrop"
-               android:id="@+id/noticeImgView"/>
-       </com.google.android.material.card.MaterialCardView>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:id="@+id/galleryImgView"/>
+        </com.google.android.material.card.MaterialCardView>
 
 
 
