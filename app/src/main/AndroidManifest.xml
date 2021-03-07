@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.schoolmanagementapp" >
+    package="com.example.schoolmanagementapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -11,11 +11,15 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SchoolManagementApp" >
-        <activity android:name=".UploadImage" >
-        </activity>
-        <activity android:name=".Uploadnotice" />
-        <activity android:name=".MainActivity" >
+        android:theme="@style/Theme.SchoolManagementApp">
+        <activity android:name=".notice.DeleteNoticeActivity"></activity>
+        <activity android:name=".faculty.UpdateTeacherActivity" />
+        <activity android:name=".faculty.AddTeacher" />
+        <activity android:name=".faculty.UpdateFaculty" />
+        <activity android:name=".UploadPdf" />
+        <activity android:name=".UploadImage" />
+        <activity android:name=".notice.Uploadnotice" />
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

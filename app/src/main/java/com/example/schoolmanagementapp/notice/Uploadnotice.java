@@ -1,8 +1,7 @@
-package com.example.schoolmanagementapp;
+package com.example.schoolmanagementapp.notice;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -18,6 +17,7 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.schoolmanagementapp.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -44,7 +44,7 @@ public class Uploadnotice extends AppCompatActivity {
     private final int REQ = 1;
     private Bitmap bitmap;
 
-    private DatabaseReference reference;
+    private DatabaseReference reference,dbRef;
     private StorageReference storageReference;
     String downloadUrl = "";
     private ProgressDialog pd;
@@ -126,8 +126,8 @@ public class Uploadnotice extends AppCompatActivity {
     }
 
     private void uploadData() {
-        reference = reference.child("Notice");
-        final String uniqueKey = reference.push().getKey();
+        dbRef = reference.child("Notice");
+        final String uniqueKey = dbRef.push().getKey();
         String title = noticeTitle.getText().toString();
         Calendar calForDate = Calendar.getInstance();
         SimpleDateFormat currentDate = new SimpleDateFormat("dd-MM-yy");
@@ -137,7 +137,7 @@ public class Uploadnotice extends AppCompatActivity {
         SimpleDateFormat currentTime = new SimpleDateFormat("hh:mm a");
         String time = currentTime.format(calForTime.getTime());
         NoticeData noticeData = new NoticeData(title, downloadUrl, date, time, uniqueKey);
-        reference.child(uniqueKey).setValue(noticeData).addOnSuccessListener(new OnSuccessListener<Void>() {
+        dbRef.child(uniqueKey).setValue(noticeData).addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {
                 pd.dismiss();
