@@ -13,7 +13,7 @@ import com.example.schoolmanagementapp.notice.Uploadnotice;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    CardView uploadNotice, uploadImage,uploadEbook,updateFaculty,deleteNotice;
+    CardView  uploadNotice, uploadImage,uploadEbook,updateFaculty,deleteNotice;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
